@@ -1,0 +1,463 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ===== End of CSS Reset ===== */
+
+
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+body {
+	font-family: Microsoft JhengHei;
+}
+
+a {
+	text-decoration: none;
+}
+
+.wrap {
+	width: 800px;
+	margin: 0 auto;
+}
+
+
+/* ===== topbar section ===== */
+.topbar {
+	height: 30px;
+	background: #f6f6f6;
+}
+
+.topbar ul {
+	float: right;
+	margin-top: 7px;
+}
+
+.topbar ul li {
+	float: left;
+	margin-right: 7px;
+}
+
+.topbar li img,
+.topbar li span {
+	float: left;
+}
+
+.topbar li img {
+	margin-right: 3px;
+}
+
+.fb span {
+	color: #566da7;
+}
+
+.twitter span {
+	color: #25b0ed;
+}
+
+.fb span:hover, .twitter span:hover {
+	text-decoration: underline;
+}
+
+.fb {
+	padding-right: 7px;
+	border-right: 1px #cccccc solid;
+}
+
+
+/* ===== header section ===== */
+.logo {
+	float: left;
+	margin: 5px 20px;
+}
+
+.logo a {
+	display: block;
+	width: 170px;
+	height: 36px;
+	background-image: url(../img/logo.png);
+	text-indent: 101%;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.menu {
+	float: right;
+}
+
+.menu>li {
+	float: left;
+	position: relative;
+}
+
+.menu li a {
+	display: block;
+	height: 46px;
+	line-height: 46px;
+	padding: 0 10px;
+	color: #00cc99;
+	font-weight: bold;
+}
+
+.menu>li>a:hover,
+.dropdown.open {
+	border-bottom: 3px solid #00cc99;
+}
+
+.menu ul {
+	display: none;
+	background: rgba(255, 255, 255, 0.7);
+	position: absolute;
+	top: 100%;
+	left: 0;
+	min-width: 100%;
+	z-index: 99;
+}
+
+/* 利用CSS :hover的效果製作下拉式選單 */
+/*.menu li:hover ul {
+	display: block;
+}*/
+/* ================================== */
+
+.menu ul a:hover {
+	background: rgba(0, 204, 153, 0.7);
+	color: #fff;
+}
+
+.clearfix {
+	clear: both;
+}
+
+
+/* ===== banner section ===== */
+.banner {
+	width: 800px;
+	height: 276px;
+	background-image: url(../img/banner2.jpg);
+	position: relative;
+}
+
+.graybar {
+	width: 800px;
+	height: 120px;
+	background: black;
+	opacity: 0.1;
+	position: absolute;
+	top: 85px;
+}
+
+.banner h2 {
+	font-size: 30px;
+	line-height: 36px;
+	position: absolute;
+	left: 20px;
+	top: 105px;
+	color: white;
+}
+
+.main {
+	margin-bottom: 15px;
+}
+
+
+/* ===== main>intro section ===== */
+.intro ul {
+	display: flex;
+	margin: 0 10px;
+}
+
+/*.intro ul li{*/
+.html5, .rwd, .jquery {
+	float: left;
+	width: 240px;
+	margin: 40px 10px;
+	border-left: 1px solid #d9d9d9;
+	border-right: 1px solid #d9d9d9;
+	border-bottom: 1px solid #d9d9d9;
+	border-radius: 0 0 5px 5px;
+	text-align: center;
+	padding: 20px 10px;
+	box-shadow: 0px 2px 3px #dbdbdb;
+}
+
+.intro li h2 {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.intro li h2 a {
+	color: #000;
+	font-weight: bold;
+}
+
+.intro p {
+	text-align: justify;
+	line-height: 20px;
+}
+
+.jquery ul {
+	display: block;
+	text-align: left;
+	list-style-type: disc;
+	list-style-position: inside;
+	line-height: 20px;
+}
+
+
+/* main>compare section */
+.compare,
+.member-work {
+	margin-bottom: 50px;
+}
+
+.compare h2,
+.member-work h2 {
+	text-align: center;
+	font-size: 24px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+.compare table {
+	margin: 0 auto;
+	width: 700px;
+}
+
+.compare table th {
+	text-align: left;
+	font-weight: bold;
+	padding: 10px;
+	background: #f7f7f7;
+	border-top: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.compare table td {
+	padding: 10px;
+	border-top: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.green {
+	color: #00cc99;
+}
+
+
+.member-work ul {
+	margin: 0 10px;
+	overflow: hidden;
+	width: 100%;
+}
+
+
+.member-work ul li {
+	float: left;
+	width: 180px;
+	height: 180px;
+	border: 5px solid lightgray;
+	margin: 10px 7.5px;
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden;
+	transition: border 1s;
+}
+
+.member-work ul li:hover {
+	border: 5px solid gray;
+}
+
+.member-work img {
+	opacity: 0.5;
+	transition: all 1s ease;
+}
+
+.member-work a:hover img {
+	opacity: 1;
+}
+
+.member-work .work-title {
+	position: absolute;
+	bottom: -35px;
+	left: 0;
+	background: gray;
+	color: #fff;
+	width: 100%;
+	padding: 5px 10px;
+	font-weight: bold;
+	transition: all 1s;
+}
+
+/* ===== 利用CSS :hover製作動畫效果 ===== */
+/*.member-work li:hover .work-title {
+	bottom: 0;
+}*/
+/* ====================================== */
+
+
+/* ===== 利用jQuery觸發CSS製作動畫效果 ===== */
+.work-title.active {
+	bottom: 0;
+}
+/* ========================================= */
+
+
+
+/* ===== main>feedback section ===== */
+.feedback {
+	width: 800px;
+	height: 405px;
+	background-image: url(../img/bg.jpg);
+	/*background: linear-gradient(#00644b, #009872)*/
+}
+
+.feedback h2 {
+	color: white;
+	text-align: center;
+	font-size: 24px;
+	line-height: 36px;
+	padding: 20px 0;	
+}
+
+.feedback form {
+	display: flex;
+}
+
+.opinion, .user-info {
+	float: left;
+	width: 360px;
+	margin: 20px;
+}
+
+.opinion textarea {
+	width: 340px;
+	height: 220px;
+	border-radius: 3px;
+	border: 0;
+	padding: 5px 10px;
+	/*overflow: hidden;*/
+}
+
+.user-info input {
+	width: 360px;
+	margin-top: 5px;
+	border-radius: 3px;
+	border: 0;
+	padding: 5px 10px;
+}
+
+.user-info input[type=text]:focus,
+.user-info input[type=email]:focus,
+textarea:focus {
+	background: lightyellow;
+}
+
+.user-info label {
+	color: white;
+}
+
+.user-info .btn {
+	width: 50px;
+	color: white;
+	background: #00cc99;
+	border-radius: 3px;
+	border: 0px;
+	padding: 5px 0;
+	float: right;
+	font-weight: bold;
+
+	/* 送出按鈕加上 cursor: pointer，讓滑鼠滑過去時會有手出現 */
+	cursor: pointer;
+}
+
+.user-info .btn:hover {
+	box-shadow: 0 0 1px 1px #00664F inset;
+	color: #00664F;
+}
+
+
+/* ===== footer section ===== */
+.footer {
+	margin-bottom: 15px;
+}
+
+.footer img {
+	margin-left: 20px;
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	/* 利用filter:grayscale()的方式，將原來的logo改為灰階
+	   可以少切一張圖，瀏覽器也可以減少載入一張圖片 */
+	/* chrome、Safari、Firefox顯示正常，IE11仍然不支援 */
+}
+
+.contact {
+	float: right;
+	margin-right: 10px;
+}
+
+.contact p {
+	margin-bottom: 5px;
+}
+
+.red {
+	color: red;
+}
+
+.mail:hover {
+	border-bottom: 1px dashed red;
+}
+
+.b2top {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
